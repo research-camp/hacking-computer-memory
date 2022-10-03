@@ -1,5 +1,5 @@
 <h1 align="center">
-Hacking computer memory with C, But how?
+Hacking computer memory with C, But how? (Buffer overflow attack)
 </h1>
 
 Access to other parts of memory with C programming language. How does C programming language allows us to
@@ -17,6 +17,12 @@ memory[10] = 10;
 
 The program will execute without any errors or warnings. Allow us to access any element out of array allocated space.
 But how does this cause problems?
+
+## Links
+https://stackoverflow.com/questions/38416792/array-allows-out-of-bounds-access-in-c
+https://www.codeproject.com/Questions/1075908/what-you-do-to-avoid-out-of-bounds-array-access-in
+https://www.imperva.com/learn/application-security/buffer-overflow/
+https://www.geeksforgeeks.org/buffer-overflow-attack-with-example/
 
 ## Ideas
 
