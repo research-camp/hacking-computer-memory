@@ -89,13 +89,9 @@ At a functional level, an SEH overwrite is achieved using a stack-based buffer o
 
 Security measures in code and operating system protection are not enough. When an organization discovers a buffer overflow vulnerability, it must react quickly to patch the affected software and make sure that users of the software can access the patch.
 
-## Links
+## Resources
 
-https://stackoverflow.com/questions/38416792/array-allows-out-of-bounds-access-in-c
-https://www.codeproject.com/Questions/1075908/what-you-do-to-avoid-out-of-bounds-array-access-in
-https://www.imperva.com/learn/application-security/buffer-overflow/
-https://www.geeksforgeeks.org/buffer-overflow-attack-with-example/
-
-## Ideas
-
-- Tex file of research
+- [Stack Overflow question about Buffer Overflow](https://stackoverflow.com/questions/38416792/array-allows-out-of-bounds-access-in-c)
+- [Avoid out of bounds array article](https://www.codeproject.com/Questions/1075908/what-you-do-to-avoid-out-of-bounds-array-access-in)
+- [Imperva article about Buffer Overflow](https://www.imperva.com/learn/application-security/buffer-overflow/)
+- [GeeksForGeeks](https://www.geeksforgeeks.org/buffer-overflow-attack-with-example/)
