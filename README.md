@@ -9,7 +9,7 @@ In this research we are going to talk about **Buffer Overflow** and it is a comm
 
 ## What is happening actually?
 
-Lets see the problem in an example.<br />
+Lets see the problem in an example. <br />
 If you run the sample file with ```make run``` command, you can see that in this program we can access
 memory parts out of array allocated space in memory.
 
@@ -28,11 +28,25 @@ depending on how that particular array is laid out in memory. **Buffer Overflows
 If the transaction overwrites executable code, it can cause the program to behave unpredictably and generate incorrect results, memory access errors, or crashes.
 It can also cause **Buffer Overflow attack**.
 
+### Buffer Overflow Attack
+
 In a **Buffer Overflow attack**, the extra data sometimes holds specific instructions for actions intended by a hacker or malicious user; for example, the data could trigger a response that damages files, changes data or unveils private information.
 
 Attackers exploit **Buffer Overflow** issues by overwriting the memory of an application. This changes the execution path of the program, triggering a response that damages files or exposes private information. For example, an attacker may introduce extra code, sending new instructions to the application to gain access to IT systems.
 
 If attackers know the memory layout of a program, they can intentionally feed input that the buffer cannot store, and overwrite areas that hold executable code, replacing it with their own code. For example, an attacker can overwrite a pointer (an object that points to another area in memory) and point it to an exploit payload, to gain control over the program.
+
+### Types of Buffer Overflow Attacks
+
+**Stack-based** buffer overflows are more common, and leverage stack memory that only exists during the execution time of a function.
+
+**Heap-based** attacks are harder to carry out and involve flooding the memory space allocated for a program beyond memory used for current runtime operations.
+
+## Which programming languages are more vulnerable?
+
+C and C++ are two languages that are highly susceptible to buffer overflow attacks, as they do not have built-in safeguards against overwriting or accessing data in their memory. Mac OSX, Windows, and Linux all use code written in C and C++.
+
+Languages such as PERL, Java, JavaScript, and C# use built-in safety mechanisms that minimize the likelihood of buffer overflow.
 
 ## Links
 
@@ -43,6 +57,4 @@ https://www.geeksforgeeks.org/buffer-overflow-attack-with-example/
 
 ## Ideas
 
-- Show the problems
-- Give suggestions to fix or prevent the problem
 - Tex file of research
