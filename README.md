@@ -1,5 +1,5 @@
 <h1 align="center">
-Hacking computer memory with C, But how? (Buffer overflow attack)
+Hacking computer memory with C, But how? (Buffer Overflow Attack)
 </h1>
 
 Access to other parts of memory with C programming language. How does C programming language allows us to
@@ -23,9 +23,19 @@ But how does this cause problems?
 
 ## Consequences
 
-This access may subtly corrupt other memory used by your program, or may cause an immediate segmentation fault depending on how that particular array is laid out in memory. **Buffer Overflows** can affect all types of software. They typically result from malformed inputs or failure to allocate enough space for the buffer. If the transaction overwrites executable code, it can cause the program to behave unpredictably and generate incorrect results, memory access errors, or crashes.
+This access may subtly corrupt other memory used by your program, or may cause an immediate segmentation fault
+depending on how that particular array is laid out in memory. **Buffer Overflows** can affect all types of software. They typically result from malformed inputs or failure to allocate enough space for the buffer.
+If the transaction overwrites executable code, it can cause the program to behave unpredictably and generate incorrect results, memory access errors, or crashes.
+It can also cause **Buffer Overflow attack**.
+
+In a **Buffer Overflow attack**, the extra data sometimes holds specific instructions for actions intended by a hacker or malicious user; for example, the data could trigger a response that damages files, changes data or unveils private information.
+
+Attackers exploit **Buffer Overflow** issues by overwriting the memory of an application. This changes the execution path of the program, triggering a response that damages files or exposes private information. For example, an attacker may introduce extra code, sending new instructions to the application to gain access to IT systems.
+
+If attackers know the memory layout of a program, they can intentionally feed input that the buffer cannot store, and overwrite areas that hold executable code, replacing it with their own code. For example, an attacker can overwrite a pointer (an object that points to another area in memory) and point it to an exploit payload, to gain control over the program.
 
 ## Links
+
 https://stackoverflow.com/questions/38416792/array-allows-out-of-bounds-access-in-c
 https://www.codeproject.com/Questions/1075908/what-you-do-to-avoid-out-of-bounds-array-access-in
 https://www.imperva.com/learn/application-security/buffer-overflow/
