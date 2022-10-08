@@ -2,4 +2,4 @@ compile:
 	gcc -o main code/main.c
 
 run: compile
-	./main
+	./main 123456789
