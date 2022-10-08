@@ -64,6 +64,31 @@ C and C++ are two languages that are highly susceptible to buffer overflow attac
 
 Languages such as PERL, Java, JavaScript, and C# use built-in safety mechanisms that minimize the likelihood of buffer overflow.
 
+## How to Prevent Buffer Overflows?
+
+### Bound indexing
+
+Since you didn't show any code the answer can only be a general one: _Stay inside the bounds of the array_. Apart from accessing at some wildly out of bounds position, one particular case is more common: If you have an array with a size of 10 then 10 isn't a valid index. Because arrays in C++ are 0-based. So in this case, valid indices are 0 to 9.
+
+### Use dynamic lists
+
+You must not go out of bounds, the C/C++ developer has to be precise. That said, you could use _std::vector_ instead of a plain array: it provides the _std::vector::at_ method that throws an exception if you try to make an out-of-bounds access.
+
+### Address space randomization (ASLR)
+
+Randomly moves around the address space locations of data regions. Typically, buffer overflow attacks need to know the locality of executable code, and randomizing address spaces makes this virtually impossible.
+
+### Data execution prevention flags
+
+These flags certain areas of memory as non-executable or executable, which stops an attack from running code in a non-executable region.
+
+### Structured exception handler overwrite protection (SEHOP)
+
+Helps stop malicious code from attacking Structured Exception Handling (SEH), a built-in system for managing hardware and software exceptions. It thus prevents an attacker from being able to make use of the SEH overwrite exploitation technique. 
+At a functional level, an SEH overwrite is achieved using a stack-based buffer overflow to overwrite an exception registration record, stored on a thread’s stack.
+
+Security measures in code and operating system protection are not enough. When an organization discovers a buffer overflow vulnerability, it must react quickly to patch the affected software and make sure that users of the software can access the patch.
+
 ## Links
 
 https://stackoverflow.com/questions/38416792/array-allows-out-of-bounds-access-in-c
