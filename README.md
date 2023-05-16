@@ -1,8 +1,4 @@
-<h1 align="center">
-  Hacking computer memory with C, But how? (Buffer Overflow Attack)
-</h1>
-
-<br />
+# Hacking computer memory with C, But how? (Buffer Overflow Attack)
 
 Access to other parts of memory with C programming language. How does C programming language allows us to
 access every part of memory? How we can secure our system againts this problem?
